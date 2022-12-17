@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="usalesiana.vistas.Menuprincipal.Principal"
+             xmlns:vistas="clr-namespace:usalesiana.vistas.Menuprincipal">
+    <Grid BackgroundColor="DarkBlue">
+        <CollectionView ItemsSource="{Binding ListaModulos }"
+                        x:Name="listamodulos">
+            <CollectionView.Header>
+                <vistas:Encabezado /> 
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Span="2"
+                                 Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <vistas:Cuerpo>
+                        <vistas:Cuerpo.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.Seleccionarmodulocommand, Source={x:Reference listamodulos}}"
+                                  CommandParameter="{Binding .}" />
+
+                        </vistas:Cuerpo.GestureRecognizers>
+                    </vistas:Cuerpo>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <vistas:Piepagina VerticalOptions="End"/>
+    </Grid>
+</ContentPage>

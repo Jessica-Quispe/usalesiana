@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="usalesiana.vistas.Menuprincipal.Encabezado">
+    <Grid>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame HasShadow="False"
+                       CornerRadius="50"
+                       Padding="10">
+                    <Image Source="https://i.ibb.co/9N6nSNL/list.png"
+                           HeightRequest="25"/>
+                </Frame>
+                <Label Text="Universidad Salesiana" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="#F1C40F"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+                
+            </StackLayout>
+            <Frame CornerRadius="50"
+                   HasShadow="False"
+                   Padding="8">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://i.ibb.co/WycR8xS/busqueda.png"
+                           HeightRequest="25"
+                           Margin="0,0,20,0"/>
+                    <Label Text="Buscar"
+                           VerticalOptions="Center"
+                           TextColor="#F1C40F"
+                           FontSize="17"
+                           FontAttributes="Bold"
+                           HorizontalOptions="FillAndExpand"/>
+                    <Image Source="https://i.ibb.co/D4wm8HT/usb.png"
+                           HeightRequest="35"
+                           Margin="20,0,0,0"/>
+                </StackLayout>
+            </Frame>
+              <CollectionView ItemsSource="{Binding Listacategorias}"
+                              HeightRequest="120"
+                              x:Name="listacategorias">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                                     />
+                </CollectionView.ItemsLayout>
+                 <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="8,0">
+                            
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.Seleccionarcommand,Source={x:Reference listacategorias}}"
+                                   CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
+                            
+                            <Frame CornerRadius="50"
+                                    HorizontalOptions="StartAndExpand"
+                                    Padding="10"
+                                    HasShadow="False">
+                                <Frame.Background>
+                                    <LinearGradientBrush
+                                        BindingContext="{Binding Source={RelativeSource AncestorType=
+                                        {x:Type Frame}}, Path=BindingContext}">
+                                        <GradientStop Color="{Binding Color1}"
+                                              Offset="0.5"/>
+                                        <GradientStop Color="{Binding Color2}"
+                                              Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                                <StackLayout>
+                                    <Frame CornerRadius="45"
+                                           HasShadow="False"
+                                           Padding="10">
+                                        
+                                        <Image Source="{Binding icono}"
+                                               HeightRequest="45"
+                                               />
+                                    </Frame>
+                                    <Label Text="{Binding categoria}" 
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"
+                               TextColor="{Binding Textcolor}"
+                               VerticalOptions="Center"
+                               FontSize="13"
+                               />
+                                </StackLayout>
+                            </Frame>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+        </StackLayout>
+    </Grid>
+</ContentView>

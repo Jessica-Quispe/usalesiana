@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="usalesiana.vistas.Detalle.Cuerpo">
+    <StackLayout>
+        <Grid>
+            <Image Source=""/>
+        </Grid>
+        <Label Text="Universidad Salesiana de Bolivia"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="Title"
+               TextColor="DarkBlue"/>
+        <Label Text="MISION"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="Subtitle"
+               TextColor="DarkBlue"/>
+
+        <Label Text="M"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="Small"
+               TextColor="DarkBlue"/>
+
+        <Label Text="VISION"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="Subtitle"
+               TextColor="DarkBlue"/>
+        
+        <Label Text="V"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="Subtitle"
+               TextColor="DarkBlue"/>
+        
+    </StackLayout>
+</ContentView>

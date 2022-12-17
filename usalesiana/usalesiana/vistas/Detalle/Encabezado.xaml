@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="usalesiana.vistas.Detalle.Encabezado">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal"
+                     Margin="20">
+            
+            <Frame HasShadow="True"
+                       CornerRadius="50"
+                       Padding="10">
+                <Image Source="https://i.ibb.co/bz6fSLS/flecha.jpg"
+                           HeightRequest="25"/>
+            </Frame>
+            
+            <Label Text="Detalle" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="#F1C40F"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

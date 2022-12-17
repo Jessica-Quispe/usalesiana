@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="usalesiana.vistas.Menuprincipal.Cuerpo">
+    <Grid RowDefinitions="10,*"
+          Padding="12">
+        <Frame CornerRadius="40"
+               HasShadow="False"
+               Grid.Row="1">
+            <StackLayout Margin="0,10,0,0"
+                         Padding="10"
+                         HorizontalOptions="Center"
+                         Orientation="Vertical">
+                 <Image Source="{Binding icono}"      
+               HeightRequest="100"/>
+                <Label Text="{Binding descripcion}"
+                       FontAttributes="Italic"
+                       FontSize="20"
+                       TextColor="Black"/>
+                <Label Text="Quieres saber mas?"
+                       TextColor="Blue"
+                       HorizontalTextAlignment="Center"/>
+                   
+            </StackLayout>
+            
+            
+        </Frame>
+        
+        
+        
+    </Grid>
+</ContentView>
